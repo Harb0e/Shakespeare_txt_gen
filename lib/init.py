@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -16,7 +17,7 @@ class TokenShake():
         #tager de første 10000 sætninger
         self.training_sens = self.sentences[:10000]
         self.tokenizer = Tokenizer()
-        #fitter tokenizeren, dette gør tokenizeren danner en dictionary hvor alle ord er forbindet med et tal
+        #fitter tokenizeren, dette gør tokenizeren danner en dictionary hvor alle ord er forbundet med et tal
         self.tokenizer.fit_on_texts(self.training_sens)
         self.word_idx = self.tokenizer.word_index
         #laver sætningerne om til arrays med tal så det kan komme igennem modellen

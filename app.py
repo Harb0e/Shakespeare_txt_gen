@@ -25,7 +25,7 @@ def home():
 def access():
     data = request.get_json()
     print(data)
-    name = data.get("name", "this is a test story")
+    name = data.get("text", "this is a test story")
     numwords = data.get("words",1)
 
     message = gentext.get(name,numwords)

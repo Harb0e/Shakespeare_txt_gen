@@ -53,7 +53,7 @@
       "AccessData": {
         "type": "object",
         "properties": {
-          "name": {
+          "text": {
             "type": "string"
           },
           "words": {
